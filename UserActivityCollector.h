@@ -1,7 +1,8 @@
 #pragma once
 #include "IDataCollector.h"
+#include "MetadataEncryptor.h"
 
-class UserActivityCollector: public IDataCollector
+class UserActivityCollector : public IDataCollector
 {
 private:
 	string collect;		//Строка для сбора данных

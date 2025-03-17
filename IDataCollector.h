@@ -19,4 +19,3 @@ class IDataCollector
 		//Возвращает готовность данных для предварительной обработки
 		virtual int sendToProcessing() = 0;
 };
-

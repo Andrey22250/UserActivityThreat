@@ -15,7 +15,7 @@ int main()
     SetConsoleOutputCP(1251);
 
     // Создание объектов реальных модулей для полноценной демонстрации
-    UserActivityCollector *dataCollector = new UserActivityCollector("Проверочные данные", "Метаданные");
+    UserActivityCollector dataCollector("Проверочные данные", "Метаданные");
     DataPreprocessingModule dataPreprocessor;
     BehaviorAnalysisModule behaviorAnalyzer;
     ThreatClassificationModule threatAssessment;
@@ -26,7 +26,7 @@ int main()
     // Создание центрального управляющего модуля
     CentralControlModule controlCenter;
     controlCenter.initializeModules(
-        dataCollector, &dataPreprocessor, &behaviorAnalyzer,
+        &dataCollector, &dataPreprocessor, &behaviorAnalyzer,
         &threatAssessment, &responseSystem, &mlModule, &communicationModule
     );
 
@@ -47,12 +47,5 @@ int main()
 
     cout << "=== Проверка успешна ===\n";
 
-    delete dataCollector;
-    delete &dataPreprocessor;
-    delete& behaviorAnalyzer,
-    delete& threatAssessment; 
-    delete& responseSystem; 
-    delete& mlModule; 
-    delete& communicationModule;
     return 0;
 }
