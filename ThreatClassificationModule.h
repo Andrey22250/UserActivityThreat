@@ -1,5 +1,12 @@
 #pragma once
-class ThreatClassificationModule
+#include <iostream>
+#include "IThreatAssessment.h"
+
+class ThreatClassificationModule : public IThreatAssessment
 {
+    void evaluateThreatLevel() override;
+    void applyPredefinedModels() override;
+    void generateThreatReport() override;
+    void sendToResponseSystem() override;
 };
 

@@ -1,13 +1,12 @@
 #pragma once
-#include <string>
 
 class ICommunication
 {
     // Уведомление пользователя
-    virtual void notifyUser(const std::string& userID, const std::string& message) = 0;
+    virtual void notifyUser() = 0;
 
     // Отправка отчёта
-    virtual void sendReportToModerators(const std::string& report) = 0;
+    virtual void sendReportToModerators() = 0;
 
     // Получение обратной связи
     virtual void receiveModeratorFeedback() = 0;

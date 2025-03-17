@@ -1,17 +1,16 @@
 #pragma once
-#include <vector>
-#include <string>
+#include <iostream>
 
 class IMachineLearning
 {
     // Обучение модели
-    virtual void trainModel(const std::vector<std::string>& dataset) = 0;
+    virtual void trainModel() = 0;
 
     // Обновление алгоритмов
     virtual void updateAlgorithm() = 0;
 
     // Оценка эффективности
-    virtual double evaluatePerformance() = 0;
+    virtual void evaluatePerformance() = 0;
 
     // Развёртывание модели
     virtual void deployNewModel() = 0;

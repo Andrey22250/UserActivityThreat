@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include <iostream>
 
 class IControlCenter
 {
@@ -7,12 +7,11 @@ class IControlCenter
     virtual void configureSystemParameters() = 0;
 
     // Мониторинг состояния
-    virtual std::string monitorModuleStatus() = 0;
+    virtual void monitorModuleStatus() = 0;
 
     // Корректировка уровней угроз
     virtual void adjustThreatLevels() = 0;
 
     // Генерация системного отчёта
-    virtual std::string generateSystemReport() = 0;
+    virtual void generateSystemReport() = 0;
 };
-

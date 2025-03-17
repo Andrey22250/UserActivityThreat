@@ -10,7 +10,7 @@ class IThreatAssessment
     virtual void applyPredefinedModels() = 0;
 
     // Генерация отчёта
-    virtual std::string generateThreatReport() = 0;
+    virtual void generateThreatReport() = 0;
 
     // Передача в систему реагирования
     virtual void sendToResponseSystem() = 0;
