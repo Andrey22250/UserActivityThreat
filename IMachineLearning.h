@@ -3,6 +3,7 @@
 
 class IMachineLearning
 {
+public:
     // Обучение модели
     virtual void trainModel() = 0;
 

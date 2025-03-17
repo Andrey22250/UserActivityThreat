@@ -2,6 +2,7 @@
 
 class ICommunication
 {
+public:
     // Уведомление пользователя
     virtual void notifyUser() = 0;
 

@@ -3,6 +3,7 @@
 
 class IThreatAssessment
 {
+public:
     // ќценка уровн€ угрозы
     virtual void evaluateThreatLevel() = 0;
 

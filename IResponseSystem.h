@@ -3,6 +3,7 @@
 
 class IResponseSystem
 {
+public:
     // Блокировка контента
     virtual void blockContent() = 0;
 

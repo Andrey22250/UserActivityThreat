@@ -1,8 +1,24 @@
 #pragma once
 #include <iostream>
+#include "IDataCollector.h"
+#include "IDataPreprocessor.h"
+#include "IBehaviorAnalyzer.h"
+#include "IThreatAssessment.h"
+#include "IResponseSystem.h"
+#include "IMachineLearning.h"
+#include "ICommunication.h"
 
 class IControlCenter
 {
+public:
+    virtual void initializeModules(IDataCollector* dataCollector,
+        IDataPreprocessor* dataPreprocessor,
+        IBehaviorAnalyzer* behaviorAnalyzer,
+        IThreatAssessment* threatAssessment,
+        IResponseSystem* responseSystem,
+        IMachineLearning* machineLearning,
+        ICommunication* communication) = 0;
+    
     // Настройка параметров
     virtual void configureSystemParameters() = 0;
 

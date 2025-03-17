@@ -3,6 +3,7 @@
 
 class IBehaviorAnalyzer
 {
+public:
     // Анализ действий
     virtual void analyzeUserActions() = 0;
 

@@ -11,7 +11,7 @@ UserActivityCollector::UserActivityCollector(string datas, string metadata)
 int UserActivityCollector::collectUserActions()
 {
 	if (collect != "\0")
-		cout << "Данные собраны успешно";
+		cout << "Данные собраны успешно..." << endl;
 	else
 		return -1;
 }
@@ -19,14 +19,14 @@ int UserActivityCollector::collectUserActions()
 int UserActivityCollector::collectMetadata()
 {
 	if (metadata != "\0")
-		cout << "Данные собраны успешно";
+		cout << "Метаданные собраны успешно..." << endl;
 	else
 		return -1;
 }
 
 int UserActivityCollector::encryptData()
 {
-	if (collectUserActions() == -1 && collectMetadata() == -1)
+	if (collectUserActions() == -1 || collectMetadata() == -1)
 		return -1;
 	else
 	{
@@ -39,6 +39,7 @@ int UserActivityCollector::encryptData()
 			this->encrypted_metadata[i] = this->metadata[i] ^ '7';
 		}
 	}
+	cout << "Данные зашифрованы успешно..." << endl;
 }
 
 int UserActivityCollector::sendToProcessing()
