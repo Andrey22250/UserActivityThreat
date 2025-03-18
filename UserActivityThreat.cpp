@@ -32,10 +32,11 @@ int main()
     );
 
     // Демонстрация работы системы с шагами и выводом информации
+    // Здесь мы показываем делегирование, при котором CentralControlModule делегирует выполнение задач другим модулям
     cout << "=== Начало проверки всех систем ===\n";
 
     cout << endl << "[Шаг 1] Сбор пользовательскиз данных...\n";   
-	controlCenter.manageDataCollection();
+    controlCenter.manageDataCollection();
 
     cout << endl << "[Шаг 2] Обработка данных...\n";
     controlCenter.processAndAnalyzeData();
@@ -47,7 +48,7 @@ int main()
     controlCenter.updateMachineLearning();
 
     cout << endl << "[Шаг 5] Отправка уведомления пользователю...\n";
-    controlCenter.communicateUserModer(); 
+    controlCenter.communicateUserModer();
     
     cout << "=== Проверка успешна ===\n";
 
@@ -59,7 +60,7 @@ int main()
 	delete mlModule;
 	delete communicationModule;
 
-    //Проверка прокси
+    //Демонстрация прокси
 
 	cout << endl << "Проверка прокси..." << endl;
     UserActivityCollector* dataCollector1 = new UserActivityCollector("Данные для обработки", "Метаданные");
