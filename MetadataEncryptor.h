@@ -1,10 +1,10 @@
 #pragma once
 #include <string>
-#include "IDataCollector.h"
+#include "UserActivityCollector.h"
 
 using namespace std;
 
-class MetadataEncryptor
+class MetadataEncryptor : public IDataCollector
 {
 public:
     static string encrypt(const string& data, char key);

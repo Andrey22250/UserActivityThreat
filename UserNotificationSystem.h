@@ -1,10 +1,10 @@
 #pragma once
 #include <string>
 #include <iostream>
-
+#include "ModeratorCommunication.h"
 using namespace std;
 
-class UserNotificationSystem
+class UserNotificationSystem : public ModeratorCommunication
 {
 private:
 	int notificationCount; //счетчик отправленных уведомлений.
