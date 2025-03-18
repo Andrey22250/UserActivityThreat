@@ -14,14 +14,14 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    // Создание объектов реальных модулей для полноценной демонстрации
+    // Создание объектов реальных модулей для демонстрации
     UserActivityCollector dataCollector("Проверочные данные", "Метаданные");
     DataPreprocessingModule dataPreprocessor;
     BehaviorAnalysisModule behaviorAnalyzer;
     ThreatClassificationModule threatAssessment;
     AutomatedResponseSystem responseSystem;
     MachineLearningModule mlModule;
-    ModeratorCommunication communicationModule;
+    ModeratorCommunication communicationModule("Оскорбления");
 
     // Создание центрального управляющего модуля
     CentralControlModule controlCenter;
@@ -45,6 +45,9 @@ int main()
     cout << endl << "[Шаг 4] Машинное обучение алгоритмов...\n";
     controlCenter.updateMachineLearning();
 
+    cout << endl << "[Шаг 5] Отправка уведомления пользователю...\n";
+    controlCenter.communicateUserModer();
+    
     cout << "=== Проверка успешна ===\n";
 
     return 0;

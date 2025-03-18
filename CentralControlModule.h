@@ -29,5 +29,6 @@ public:
     void processAndAnalyzeData();   //Анализ всех данных
     void assessThreats();           //Реагирование на угрозы
     void updateMachineLearning();   //Машинное обучение
+    void communicateUserModer();    //Уведомление модератору и пользователю
 };
 

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class MetadataEncryptor : public IDataCollector 
+class MetadataEncryptor
 {
 public:
     static string encrypt(const string& data, char key);

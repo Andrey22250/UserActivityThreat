@@ -20,39 +20,48 @@ void CentralControlModule::initializeModules(
     std::cout << "Модули успешно подключены!" << std::endl;
 }
 
-void CentralControlModule::configureSystemParameters() {
+void CentralControlModule::configureSystemParameters() 
+{
     std::cout << "Конфигурация системных параметров..." << std::endl;
 }
 
-void CentralControlModule::monitorModuleStatus() {
+void CentralControlModule::monitorModuleStatus() 
+{
     std::cout << "Проверка состояний модулей..." << std::endl;
 }
 
-void CentralControlModule::adjustThreatLevels() {
+void CentralControlModule::adjustThreatLevels() 
+{
     std::cout << "Обновление критериев оценки угроз..." << std::endl;
 }
 
-void CentralControlModule::generateSystemReport() {
+void CentralControlModule::generateSystemReport() 
+{
     std::cout << "Создание системного отчёта..." << std::endl;
 }
 
 //Сбор данных
-void CentralControlModule::manageDataCollection() {
-    if (dataCollector) {
+void CentralControlModule::manageDataCollection() 
+{
+    if (dataCollector) 
+    {
         dataCollector->sendToProcessing();
     }
 }
 
 //Очистка и обработка данных
-void CentralControlModule::processAndAnalyzeData() {
-    if (dataPreprocessor) {
+void CentralControlModule::processAndAnalyzeData() 
+{
+    if (dataPreprocessor) 
+    {
         dataPreprocessor->cleanData();
         dataPreprocessor->normalizeData();
         dataPreprocessor->structureData();
         dataPreprocessor->sendToAnalysis();
     }
 
-    if (behaviorAnalyzer) {
+    if (behaviorAnalyzer) 
+    {
         behaviorAnalyzer->analyzeUserActions();
         behaviorAnalyzer->detectToxicContent();
         behaviorAnalyzer->identifyMaliciousSoftware();
@@ -60,14 +69,17 @@ void CentralControlModule::processAndAnalyzeData() {
     }
 }
 //Определение уровня угрозы и реагирование на них
-void CentralControlModule::assessThreats() {
-    if (threatAssessment) {
+void CentralControlModule::assessThreats() 
+{
+    if (threatAssessment) 
+    {
         threatAssessment->evaluateThreatLevel();
         threatAssessment->applyPredefinedModels();
         threatAssessment->generateThreatReport();
         threatAssessment->sendToResponseSystem();
     }
-    if (responseSystem) {
+    if (responseSystem) 
+    {
         responseSystem->blockContent();
         responseSystem->suspendAccount();
         responseSystem->generateAlert();
@@ -76,11 +88,25 @@ void CentralControlModule::assessThreats() {
 }
 
 //Машинное обучение
-void CentralControlModule::updateMachineLearning() {
-    if (machineLearning) {
+void CentralControlModule::updateMachineLearning() 
+{
+    if (machineLearning) 
+    {
         machineLearning->trainModel();
         machineLearning->updateAlgorithm();
         machineLearning->evaluatePerformance();
         machineLearning->deployNewModel();
+    }
+}
+
+//Уведомление пользователю и модераторам
+void CentralControlModule::communicateUserModer()
+{
+    if (communication)
+    {
+        communication->notifyUser();
+        communication->sendReportToModerators(); 
+        communication->receiveModeratorFeedback();
+        communication->establishSecureConnection();
     }
 }
