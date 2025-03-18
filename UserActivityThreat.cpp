@@ -60,19 +60,19 @@ int main()
 	delete mlModule;
 	delete communicationModule;
 
-    //Демонстрация прокси
+    // Демонстрация прокси
 
-	cout << endl << "Проверка прокси..." << endl;
+    cout << endl << "Проверка прокси..." << endl;
     UserActivityCollector* dataCollector1 = new UserActivityCollector("Данные для обработки", "Метаданные");
-    DataCollectorProxy proxyCollector1(dataCollector1, true);
-    DataCollectorProxy proxyCollector2(dataCollector1, false);
+    DataCollectorProxy proxyCollector1(dataCollector1, true); // Прокси с доступом
+    DataCollectorProxy proxyCollector2(dataCollector1, false); // Прокси без доступа
     cout << "=== Попытка с доступом ===\n";
-    proxyCollector1.sendToProcessing();
+    proxyCollector1.sendToProcessing(); // Выполнение метода с доступом
 
     cout << "\n=== Попытка без доступа ===\n";
-    proxyCollector2.collectUserActions();
-    proxyCollector2.collectMetadata();
-    proxyCollector2.encryptData();
-    proxyCollector2.sendToProcessing();
+    proxyCollector2.collectUserActions(); // Попытка выполнения метода без доступа
+    proxyCollector2.collectMetadata(); // Попытка выполнения метода без доступа
+    proxyCollector2.encryptData(); // Попытка выполнения метода без доступа
+    proxyCollector2.sendToProcessing(); // Попытка выполнения метода без доступа
     return 0;
 }
