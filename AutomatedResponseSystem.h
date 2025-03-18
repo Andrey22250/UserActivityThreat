@@ -4,6 +4,10 @@
 
 class AutomatedResponseSystem : public IResponseSystem
 {
+private:
+    std::string responseLog;          // Лог действий системы
+    static int alertCount;            // Количество сработавших уведомлений
+public:
     void blockContent() override;
     void suspendAccount() override;
     void generateAlert() override;

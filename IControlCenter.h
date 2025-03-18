@@ -30,4 +30,11 @@ public:
 
     // Генерация системного отчёта
     virtual void generateSystemReport() = 0;
+    
+    // Настройка модулей
+    virtual void communicateUserModer() = 0;
+    virtual void manageDataCollection() = 0;
+    virtual void processAndAnalyzeData() = 0;
+    virtual void assessThreats() = 0;
+    virtual void updateMachineLearning() = 0;
 };

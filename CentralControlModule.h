@@ -1,34 +1,52 @@
-#pragma once
-#include "IControlCenter.h"
+#pragma once  
+#include "IControlCenter.h"  
 
-class CentralControlModule : public IControlCenter
-{
-private:
-    IDataCollector* dataCollector;
-    IDataPreprocessor* dataPreprocessor;
-    IBehaviorAnalyzer* behaviorAnalyzer;
-    IThreatAssessment* threatAssessment;
-    IResponseSystem* responseSystem;
-    IMachineLearning* machineLearning;
-    ICommunication* communication;
+class CentralControlModule : public IControlCenter  
+{  
+private:  
+   IDataCollector* dataCollector;  
+   IDataPreprocessor* dataPreprocessor;  
+   IBehaviorAnalyzer* behaviorAnalyzer;  
+   IThreatAssessment* threatAssessment;  
+   IResponseSystem* responseSystem;  
+   IMachineLearning* machineLearning;  
+   ICommunication* communication;  
 
-public:
-    void initializeModules(     //Инициализация компонентов
-        IDataCollector* dataCollector,
-        IDataPreprocessor* dataPreprocessor,
-        IBehaviorAnalyzer* behaviorAnalyzer,
-        IThreatAssessment* threatAssessment,
-        IResponseSystem* responseSystem,
-        IMachineLearning* machineLearning,
-        ICommunication* communication) override;
-    void configureSystemParameters() override;
-    void monitorModuleStatus() override;
-    void adjustThreatLevels() override;
-    void generateSystemReport() override;
-    void manageDataCollection();    //Сбор данных
-    void processAndAnalyzeData();   //Анализ всех данных
-    void assessThreats();           //Реагирование на угрозы
-    void updateMachineLearning();   //Машинное обучение
-    void communicateUserModer();    //Уведомление модератору и пользователю
+public:  
+   // Инициализация компонентов  
+   void initializeModules(  
+       IDataCollector* dataCollector,  
+       IDataPreprocessor* dataPreprocessor,  
+       IBehaviorAnalyzer* behaviorAnalyzer,  
+       IThreatAssessment* threatAssessment,  
+       IResponseSystem* responseSystem,  
+       IMachineLearning* machineLearning,  
+       ICommunication* communication) override;  
+
+   // Настройка параметров системы  
+   void configureSystemParameters() override;  
+
+   // Мониторинг состояния модулей  
+   void monitorModuleStatus() override;  
+
+   // Регулировка уровней угроз  
+   void adjustThreatLevels() override;  
+
+   // Генерация отчета системы  
+   void generateSystemReport() override;  
+
+   // Сбор данных  
+   void manageDataCollection();  
+
+   // Обработка и анализ данных  
+   void processAndAnalyzeData();  
+
+   // Оценка угроз  
+   void assessThreats();  
+
+   // Обновление машинного обучения  
+   void updateMachineLearning();  
+
+   // Уведомление модератору и пользователю  
+   void communicateUserModer();  
 };
-
