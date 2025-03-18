@@ -12,4 +12,3 @@ private:
 public:
 	static string notifyUserAuto(const string& notify);
 };
-

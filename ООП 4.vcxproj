@@ -143,6 +143,7 @@
     <ClCompile Include="MachineLearningModule.cpp" />
     <ClCompile Include="MetadataEncryptor.cpp" />
     <ClCompile Include="ModeratorCommunication.cpp" />
+    <ClCompile Include="DataCollectorProxy.cpp" />
     <ClCompile Include="ThreatClassificationModule.cpp" />
     <ClCompile Include="UserActivityCollector.cpp" />
     <ClCompile Include="UserActivityThreat.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="MachineLearningModule.h" />
     <ClInclude Include="MetadataEncryptor.h" />
     <ClInclude Include="ModeratorCommunication.h" />
+    <ClInclude Include="DataCollectorProxy.h" />
     <ClInclude Include="ThreatClassificationModule.h" />
     <ClInclude Include="UserActivityCollector.h" />
     <ClInclude Include="UserNotificationSystem.h" />

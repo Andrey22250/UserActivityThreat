@@ -17,7 +17,7 @@ int UserActivityCollector::collectUserActions()
 int UserActivityCollector::collectMetadata()
 {
 	if (metadata != "\0")
-		cout << "Метаданные собраны успешно..." << endl;
+		cout << "Метаданные собраны успешно..." << endl; 
 	else
 		return -1;
 }

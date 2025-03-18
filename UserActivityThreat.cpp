@@ -8,6 +8,7 @@
 #include "AutomatedResponseSystem.h"
 #include "MachineLearningModule.h"
 #include "ModeratorCommunication.h"
+#include "DataCollectorProxy.h"
 
 int main()
 {
@@ -15,26 +16,26 @@ int main()
     SetConsoleOutputCP(1251);
 
     // Создание объектов реальных модулей для демонстрации
-    UserActivityCollector dataCollector("Проверочные данные", "Метаданные");
-    DataPreprocessingModule dataPreprocessor;
-    BehaviorAnalysisModule behaviorAnalyzer;
-    ThreatClassificationModule threatAssessment;
-    AutomatedResponseSystem responseSystem;
-    MachineLearningModule mlModule;
-    ModeratorCommunication communicationModule("Оскорбления");
+    UserActivityCollector *dataCollector = new UserActivityCollector("Проверочные данные", "Метаданные");
+    DataPreprocessingModule *dataPreprocessor = new DataPreprocessingModule;
+    BehaviorAnalysisModule *behaviorAnalyzer = new BehaviorAnalysisModule;
+    ThreatClassificationModule *threatAssessment = new ThreatClassificationModule;
+    AutomatedResponseSystem *responseSystem = new AutomatedResponseSystem;
+    MachineLearningModule *mlModule = new MachineLearningModule;
+    ModeratorCommunication *communicationModule = new ModeratorCommunication("Оскорбления");
 
     // Создание центрального управляющего модуля
     CentralControlModule controlCenter;
-    controlCenter.initializeModules(
-        &dataCollector, &dataPreprocessor, &behaviorAnalyzer,
-        &threatAssessment, &responseSystem, &mlModule, &communicationModule
+    controlCenter.initializeModules(  //
+        dataCollector, dataPreprocessor, behaviorAnalyzer,
+        threatAssessment, responseSystem, mlModule, communicationModule
     );
 
     // Демонстрация работы системы с шагами и выводом информации
     cout << "=== Начало проверки всех систем ===\n";
 
-    cout << endl << "[Шаг 1] Сбор пользовательскиз данных...\n";
-    controlCenter.manageDataCollection();
+    cout << endl << "[Шаг 1] Сбор пользовательскиз данных...\n";   
+	controlCenter.manageDataCollection();
 
     cout << endl << "[Шаг 2] Обработка данных...\n";
     controlCenter.processAndAnalyzeData();
@@ -46,9 +47,31 @@ int main()
     controlCenter.updateMachineLearning();
 
     cout << endl << "[Шаг 5] Отправка уведомления пользователю...\n";
-    controlCenter.communicateUserModer();
+    controlCenter.communicateUserModer(); 
     
     cout << "=== Проверка успешна ===\n";
 
+	delete dataCollector;
+	delete dataPreprocessor;
+	delete behaviorAnalyzer;
+	delete threatAssessment;
+	delete responseSystem;
+	delete mlModule;
+	delete communicationModule;
+
+    //Проверка прокси
+
+	cout << endl << "Проверка прокси..." << endl;
+    UserActivityCollector* dataCollector1 = new UserActivityCollector("Данные для обработки", "Метаданные");
+    DataCollectorProxy proxyCollector1(dataCollector1, true);
+    DataCollectorProxy proxyCollector2(dataCollector1, false);
+    cout << "=== Попытка с доступом ===\n";
+    proxyCollector1.sendToProcessing();
+
+    cout << "\n=== Попытка без доступа ===\n";
+    proxyCollector2.collectUserActions();
+    proxyCollector2.collectMetadata();
+    proxyCollector2.encryptData();
+    proxyCollector2.sendToProcessing();
     return 0;
 }
