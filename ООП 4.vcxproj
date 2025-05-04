@@ -128,45 +128,67 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ActivityIterator.cpp" />
     <ClCompile Include="AutomatedResponseSystem.cpp" />
     <ClCompile Include="BehaviorAnalysisModule.cpp" />
+    <ClCompile Include="BehaviorAnalyzerAdapter.cpp" />
     <ClCompile Include="CentralControlModule.cpp" />
+    <ClCompile Include="CompressionDecorator.cpp" />
     <ClCompile Include="DataPreprocessingModule.cpp" />
+    <ClCompile Include="DataProcessorComposite.cpp" />
+    <ClCompile Include="IActivityIterator.cpp" />
     <ClCompile Include="IBehaviorAnalyzer.cpp" />
     <ClCompile Include="ICommunication.cpp" />
     <ClCompile Include="IControlCenter.cpp" />
     <ClCompile Include="IDataCollector.cpp" />
+    <ClCompile Include="IDataCollectorDecorator.cpp" />
     <ClCompile Include="IDataPreprocessor.cpp" />
+    <ClCompile Include="IDataProcessorComponent.cpp" />
     <ClCompile Include="IMachineLearning.cpp" />
     <ClCompile Include="IResponseSystem.cpp" />
+    <ClCompile Include="IThirdBehaviorAnalysis.cpp" />
     <ClCompile Include="IThreatAssessment.cpp" />
+    <ClCompile Include="LoggingDecorator.cpp" />
     <ClCompile Include="MachineLearningModule.cpp" />
     <ClCompile Include="MetadataEncryptor.cpp" />
     <ClCompile Include="ModeratorCommunication.cpp" />
     <ClCompile Include="DataCollectorProxy.cpp" />
+    <ClCompile Include="RetryDecorator.cpp" />
     <ClCompile Include="ThreatClassificationModule.cpp" />
+    <ClCompile Include="UserActivity.cpp" />
     <ClCompile Include="UserActivityCollector.cpp" />
     <ClCompile Include="UserActivityThreat.cpp" />
     <ClCompile Include="UserNotificationSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ActivityIterator.h" />
     <ClInclude Include="AutomatedResponseSystem.h" />
     <ClInclude Include="BehaviorAnalysisModule.h" />
+    <ClInclude Include="BehaviorAnalyzerAdapter.h" />
     <ClInclude Include="CentralControlModule.h" />
+    <ClInclude Include="CompressionDecorator.h" />
     <ClInclude Include="DataPreprocessingModule.h" />
+    <ClInclude Include="DataProcessorComposite.h" />
+    <ClInclude Include="IActivityIterator.h" />
     <ClInclude Include="IBehaviorAnalyzer.h" />
     <ClInclude Include="ICommunication.h" />
     <ClInclude Include="IControlCenter.h" />
     <ClInclude Include="IDataCollector.h" />
+    <ClInclude Include="IDataCollectorDecorator.h" />
     <ClInclude Include="IDataPreprocessor.h" />
+    <ClInclude Include="IDataProcessorComponent.h" />
     <ClInclude Include="IMachineLearning.h" />
     <ClInclude Include="IResponseSystem.h" />
+    <ClInclude Include="IThirdBehaviorAnalysis.h" />
     <ClInclude Include="IThreatAssessment.h" />
+    <ClInclude Include="LoggingDecorator.h" />
     <ClInclude Include="MachineLearningModule.h" />
     <ClInclude Include="MetadataEncryptor.h" />
     <ClInclude Include="ModeratorCommunication.h" />
     <ClInclude Include="DataCollectorProxy.h" />
+    <ClInclude Include="RetryDecorator.h" />
     <ClInclude Include="ThreatClassificationModule.h" />
+    <ClInclude Include="UserActivity.h" />
     <ClInclude Include="UserActivityCollector.h" />
     <ClInclude Include="UserNotificationSystem.h" />
   </ItemGroup>

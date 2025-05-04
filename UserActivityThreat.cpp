@@ -1,78 +1,73 @@
 ﻿#include <iostream>
 #include <windows.h>
+#include "IControlCenter.h"
 #include "UserActivityCollector.h"
-#include "CentralControlModule.h"
+#include "IThirdBehaviorAnalysis.h"
+#include "LoggingDecorator.h"
+#include "BehaviorAnalyzerAdapter.h"
+#include "UserActivity.h"
 #include "DataPreprocessingModule.h"
-#include "BehaviorAnalysisModule.h"
-#include "ThreatClassificationModule.h"
-#include "AutomatedResponseSystem.h"
 #include "MachineLearningModule.h"
-#include "ModeratorCommunication.h"
-#include "DataCollectorProxy.h"
+#include "DataProcessorComposite.h"
+#include "ActivityIterator.h"
+#include "RetryDecorator.h"
+#include "CompressionDecorator.h"
 
 int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    // Создание объектов реальных модулей для демонстрации
-    UserActivityCollector *dataCollector = new UserActivityCollector("Проверочные данные", "Метаданные");
-    DataPreprocessingModule *dataPreprocessor = new DataPreprocessingModule;
-    BehaviorAnalysisModule *behaviorAnalyzer = new BehaviorAnalysisModule;
-    ThreatClassificationModule *threatAssessment = new ThreatClassificationModule;
-    AutomatedResponseSystem *responseSystem = new AutomatedResponseSystem;
-    MachineLearningModule *mlModule = new MachineLearningModule;
-    ModeratorCommunication *communicationModule = new ModeratorCommunication("Оскорбления");
+    // --- Adapter Demo ---
+    std::cout << "\n=== Adapter Demo ===\n";
+    IThirdBehaviorAnalysis *legacyAnalyzer = nullptr;
+    BehaviorAnalyzerAdapter adapter(legacyAnalyzer);
+    adapter.analyzeBehavior();
+    adapter.analyzeUserActions();
 
-    // Создание центрального управляющего модуля
-    CentralControlModule controlCenter;
-    controlCenter.initializeModules(  //
-        dataCollector, dataPreprocessor, behaviorAnalyzer,
-        threatAssessment, responseSystem, mlModule, communicationModule
-    );
+    // --- Decorator Demo ---
+    std::cout << "\n=== Decorator Demo ===\n";
+    UserActivityCollector* baseCollector = new UserActivityCollector("Лог действий", "Технические метаданные");
+    IDataCollector* decoratedCollector = new LoggingDecorator(baseCollector);
+    IDataCollector* retryDecoratedCollector = new RetryDecorator(baseCollector);
+    IDataCollector* compressedDecoratedCollector = new CompressionDecorator(baseCollector);
+    decoratedCollector->collectUserActions();
+    decoratedCollector->collectMetadata();
+    retryDecoratedCollector->sendToProcessing();
+    compressedDecoratedCollector->sendToProcessing();
 
-    // Демонстрация работы системы с шагами и выводом информации
-    // Здесь мы показываем делегирование, при котором CentralControlModule делегирует выполнение задач другим модулям
-    cout << "=== Начало проверки всех систем ===\n";
+    // --- Composite Demo (Конвейер обработки данных) ---
+    std::cout << "\n=== Composite (Pipeline) Demo ===\n";
+    DataProcessorComposite pipeline;
+    DataPreprocessingModule preprocessor;
+    MachineLearningModule mlModule;
 
-    cout << endl << "[Шаг 1] Сбор пользовательскиз данных...\n";   
-    controlCenter.manageDataCollection();
+    pipeline.addComponent(&preprocessor);
+    pipeline.addComponent(&mlModule);
 
-    cout << endl << "[Шаг 2] Обработка данных...\n";
-    controlCenter.processAndAnalyzeData();
+    // Передаём данные через конвейер
+    std::string rawData = "Сырые пользовательские данные";
+    std::string processedData = pipeline.process(rawData);
 
-    cout << endl << "[Шаг 3] Реагирвоание на угрозы...\n";
-    controlCenter.assessThreats();
+    std::cout << "Итоговые данные после обработки: " << processedData << "\n";
 
-    cout << endl << "[Шаг 4] Машинное обучение алгоритмов...\n";
-    controlCenter.updateMachineLearning();
+    // --- Iterator Demo ---
+    std::cout << "\n=== Iterator Demo ===\n";
+    UserActivityCollector activityCollector("Открытие окна", "Время запуска");
 
-    cout << endl << "[Шаг 5] Отправка уведомления пользователю...\n";
-    controlCenter.communicateUserModer();
-    
-    cout << "=== Проверка успешна ===\n";
+    activityCollector.collectUserActions();
+    activityCollector.collectMetadata();
+    activityCollector.addActivity(UserActivity("click", "Button pressed"));
+    activityCollector.addActivity(UserActivity("scroll", "Page scrolled"));
 
-	delete dataCollector;
-	delete dataPreprocessor;
-	delete behaviorAnalyzer;
-	delete threatAssessment;
-	delete responseSystem;
-	delete mlModule;
-	delete communicationModule;
+    ActivityIterator iterator(activityCollector.getActivities());
+    while (iterator.hasNext()) {
+        const auto& activity = iterator.next();
+        std::cout << "Активность: [" << activity.getKey() << "] -> " << activity.getAction() << "\n";
+    }
 
-    // Демонстрация прокси
+    // Очистка памяти
+    delete decoratedCollector;
 
-    cout << endl << "Проверка прокси..." << endl;
-    UserActivityCollector* dataCollector1 = new UserActivityCollector("Данные для обработки", "Метаданные");
-    DataCollectorProxy proxyCollector1(dataCollector1, true); // Прокси с доступом
-    DataCollectorProxy proxyCollector2(dataCollector1, false); // Прокси без доступа
-    cout << "=== Попытка с доступом ===\n";
-    proxyCollector1.sendToProcessing(); // Выполнение метода с доступом
-
-    cout << "\n=== Попытка без доступа ===\n";
-    proxyCollector2.collectUserActions(); // Попытка выполнения метода без доступа
-    proxyCollector2.collectMetadata(); // Попытка выполнения метода без доступа
-    proxyCollector2.encryptData(); // Попытка выполнения метода без доступа
-    proxyCollector2.sendToProcessing(); // Попытка выполнения метода без доступа
     return 0;
 }

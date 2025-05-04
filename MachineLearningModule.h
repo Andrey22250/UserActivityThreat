@@ -1,16 +1,7 @@
 #pragma once
-#include "IMachineLearning.h"
-#include <string>
+#include "IDataProcessorComponent.h"
 
-class MachineLearningModule : public IMachineLearning
-{
-private:
-    std::string modelName; //для хранения названия текущей обучаемой модели.
-    int trainingIterations; //количество итераций обучения для отслеживания процесса.
+class MachineLearningModule : public IDataProcessorComponent {
 public:
-    void trainModel() override;
-    void updateAlgorithm() override;
-    void evaluatePerformance() override;
-    void deployNewModel() override;
+    std::string process(const std::string& input) override;
 };
-

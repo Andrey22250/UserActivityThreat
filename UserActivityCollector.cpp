@@ -39,3 +39,11 @@ int UserActivityCollector::sendToProcessing()
 	if (encryptData() == -1)
 		return -1;
 }
+
+void UserActivityCollector::addActivity(const UserActivity& activity) {
+	activities.push_back(activity);
+}
+
+const std::vector<UserActivity>& UserActivityCollector::getActivities() const {
+	return activities;
+}
