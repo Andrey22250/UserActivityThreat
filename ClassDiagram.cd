@@ -158,17 +158,10 @@
       <FileName>ActivityIterator.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AnalyzerAdapterBase">
-    <Position X="6.25" Y="11.75" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAA=</HashCode>
-      <FileName>AnalyzerAdapterBase.h</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="BehaviorAnalyzerAdapter">
     <Position X="6" Y="14.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAEgEAAAAAAAAAAAAAAABBAAAAQAAAAAAg=</HashCode>
+      <HashCode>AAAAwAAAAAAEgEAAAAAAAAAAAAAAABBAAAAQAAAAAAg=</HashCode>
       <FileName>BehaviorAnalyzerAdapter.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -211,7 +204,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LoggingDecorator">
-    <Position X="7.5" Y="7" Width="1.75" />
+    <Position X="7.25" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>LoggingDecorator.h</FileName>
@@ -222,6 +215,20 @@
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAARAAGAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UserActivity.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionDecorator">
+    <Position X="9.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>CompressionDecorator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RetryDecorator">
+    <Position X="9.5" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RetryDecorator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

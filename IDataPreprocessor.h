@@ -7,7 +7,8 @@ using namespace std;
 class IDataPreprocessor
 {
 public:
-
+    virtual void preprocess(const std::string& data) = 0;
+    
     // Очистка данных
     virtual void cleanData() = 0;
 

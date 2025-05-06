@@ -1,73 +1,55 @@
 ﻿#include <iostream>
 #include <windows.h>
-#include "IControlCenter.h"
-#include "UserActivityCollector.h"
-#include "IThirdBehaviorAnalysis.h"
-#include "LoggingDecorator.h"
-#include "BehaviorAnalyzerAdapter.h"
-#include "UserActivity.h"
-#include "DataPreprocessingModule.h"
-#include "MachineLearningModule.h"
-#include "DataProcessorComposite.h"
-#include "ActivityIterator.h"
-#include "RetryDecorator.h"
-#include "CompressionDecorator.h"
+#include "DataPreprocessingComponent.h"
+#include "TextPreprocessor.h"
+#include "ImagePreprocessor.h"
+#include "AudioPreprocessor.h"
+#include "MetadataFactory.h"
+#include "UserActivityMeta.h"
+#include "SecuritySystemFacade.h"
+#include "ThreatClassificationModule.h"
 
 int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    // --- Adapter Demo ---
-    std::cout << "\n=== Adapter Demo ===\n";
-    IThirdBehaviorAnalysis *legacyAnalyzer = nullptr;
-    BehaviorAnalyzerAdapter adapter(legacyAnalyzer);
-    adapter.analyzeBehavior();
-    adapter.analyzeUserActions();
+    // --- Bridge Demo ---
+    std::cout << "=== Bridge Demo === \n";
+    TextPreprocessor text;
+    ImagePreprocessor image;
+    AudioPreprocessor audio;
 
-    // --- Decorator Demo ---
-    std::cout << "\n=== Decorator Demo ===\n";
-    UserActivityCollector* baseCollector = new UserActivityCollector("Лог действий", "Технические метаданные");
-    IDataCollector* decoratedCollector = new LoggingDecorator(baseCollector);
-    IDataCollector* retryDecoratedCollector = new RetryDecorator(baseCollector);
-    IDataCollector* compressedDecoratedCollector = new CompressionDecorator(baseCollector);
-    decoratedCollector->collectUserActions();
-    decoratedCollector->collectMetadata();
-    retryDecoratedCollector->sendToProcessing();
-    compressedDecoratedCollector->sendToProcessing();
+    DataPreprocessingComponent textModule(&text);
+    DataPreprocessingComponent imageModule(&image);
+    DataPreprocessingComponent audioModule(&audio);
 
-    // --- Composite Demo (Конвейер обработки данных) ---
-    std::cout << "\n=== Composite (Pipeline) Demo ===\n";
-    DataProcessorComposite pipeline;
-    DataPreprocessingModule preprocessor;
-    MachineLearningModule mlModule;
+    textModule.process("Текстовые данные!");
+    imageModule.process("image.png");
+    audioModule.process("song.mp3");
+    
+	// --- Flyweight Demo ---
+	std::cout << "\n=== Flyweight Demo ===\n";
+    UserActivityMeta a1(MetadataFactory::getMetadata("Пк|Европа"), "Нажатие клавиши");
+    UserActivityMeta a2(MetadataFactory::getMetadata("Пк|Европа"), "Прокрутка страницы");
+    UserActivityMeta a3(MetadataFactory::getMetadata("Телефон|Азия"), "Открытие меню");
 
-    pipeline.addComponent(&preprocessor);
-    pipeline.addComponent(&mlModule);
+    a1.printActivity();
+    a2.printActivity();
+    a3.printActivity();
 
-    // Передаём данные через конвейер
-    std::string rawData = "Сырые пользовательские данные";
-    std::string processedData = pipeline.process(rawData);
+    MetadataFactory::cleanup(); // освободить кэш
 
-    std::cout << "Итоговые данные после обработки: " << processedData << "\n";
+	// --- Facade Demo ---
+	std::cout << "\n=== Facade Demo ===\n";
+    SecuritySystemFacade facade;
+    facade.runFullCheck(); // Всё делается одним вызовом
 
-    // --- Iterator Demo ---
-    std::cout << "\n=== Iterator Demo ===\n";
-    UserActivityCollector activityCollector("Открытие окна", "Время запуска");
-
-    activityCollector.collectUserActions();
-    activityCollector.collectMetadata();
-    activityCollector.addActivity(UserActivity("click", "Button pressed"));
-    activityCollector.addActivity(UserActivity("scroll", "Page scrolled"));
-
-    ActivityIterator iterator(activityCollector.getActivities());
-    while (iterator.hasNext()) {
-        const auto& activity = iterator.next();
-        std::cout << "Активность: [" << activity.getKey() << "] -> " << activity.getAction() << "\n";
-    }
-
-    // Очистка памяти
-    delete decoratedCollector;
+	// --- Information Expert ---
+	std::cout << "\n=== Information Expert ===\n";
+    ThreatClassificationModule* threatAssessment = new ThreatClassificationModule;
+	threatAssessment->evaluateThreatLevel();
+	threatAssessment->applyPredefinedModels();
 
     return 0;
 }

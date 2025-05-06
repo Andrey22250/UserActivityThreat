@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ActivityIterator">
+    <Position X="17.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAABAAAIAAAA=</HashCode>
+      <FileName>ActivityIterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioPreprocessor">
+    <Position X="1.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAACAAAAAA=</HashCode>
+      <FileName>AudioPreprocessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutomatedResponseSystem">
+    <Position X="7.5" Y="17" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAIAgAAAAAAAAAAEIAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutomatedResponseSystem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorAnalysisModule">
+    <Position X="17.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIgAAAAAAEgEAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>BehaviorAnalysisModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BehaviorAnalyzerAdapter">
+    <Position X="4.5" Y="16.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAwAAAAAAEgEAAAAAAAAAAAAAAABBAAAAQAAAAAAg=</HashCode>
+      <FileName>BehaviorAnalyzerAdapter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CentralControlModule">
+    <Position X="11.5" Y="16.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QEABAIAAAAACBAABBIAQAKAAAAAABQAAAgAAIAAAAAA=</HashCode>
+      <FileName>CentralControlModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressionDecorator">
+    <Position X="8.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>CompressionDecorator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataPreprocessingComponent">
+    <Position X="0.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataPreprocessingComponent.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="processor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DataPreprocessingModule">
+    <Position X="10.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataPreprocessingModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataProcessorComposite">
+    <Position X="13" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACACAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataProcessorComposite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IActivityIterator">
+    <Position X="17.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>IActivityIterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IBehaviorAnalyzer">
+    <Position X="17.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAEgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBehaviorAnalyzer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICommunication">
+    <Position X="14.5" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ICommunication.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IControlCenter">
+    <Position X="11.5" Y="11.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QEABAIAAAAACBAABBIAQAKAAAAAABQAAAgAAIAAAAAA=</HashCode>
+      <FileName>IControlCenter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IDataCollector">
+    <Position X="7.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAIAAAAAAAAAAIAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>IDataCollector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IDataCollectorDecorator">
+    <Position X="6.5" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAMAAAAAAAAAAIAAIAAAAAAAACAAAA=</HashCode>
+      <FileName>IDataCollectorDecorator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IDataPreprocessor">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAACAAAAAA=</HashCode>
+      <FileName>IDataPreprocessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IDataProcessorComponent">
+    <Position X="13" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDataProcessorComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IMachineLearning">
+    <Position X="19.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAABAAAAIAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>IMachineLearning.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImagePreprocessor">
+    <Position X="6.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAACAAAAAA=</HashCode>
+      <FileName>ImagePreprocessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IResponseSystem">
+    <Position X="7.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAgAAAAAAAAAAEIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IResponseSystem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IThirdBehaviorAnalysis">
+    <Position X="4.5" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>IThirdBehaviorAnalysis.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IThreatAssessment">
+    <Position X="1.5" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>IThreatAssessment.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoggingDecorator">
+    <Position X="4.25" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>LoggingDecorator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MachineLearningModule">
+    <Position X="15.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MachineLearningModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetadataEncryptor">
+    <Position X="13.25" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MetadataEncryptor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetadataFactory">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>MetadataFactory.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="cache" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MetadataShared">
+    <Position X="21.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAIAAAAAEAAAAAAAAAAAAgAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>MetadataShared.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModeratorCommunication">
+    <Position X="14.5" Y="13" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQACAAEAAAAAAAAAAgEAAAAAAAEAAAAAQAEAAAA=</HashCode>
+      <FileName>ModeratorCommunication.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataCollectorProxy">
+    <Position X="11" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAEAAIAAIAAgAAAAAAAIAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>DataCollectorProxy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RetryDecorator">
+    <Position X="6.5" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RetryDecorator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecuritySystemFacade">
+    <Position X="14.25" Y="18.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAgAAAAAAACAAAAAAAIA=</HashCode>
+      <FileName>SecuritySystemFacade.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="controlModule" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TextPreprocessor">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAACAAAAAA=</HashCode>
+      <FileName>TextPreprocessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThreatClassificationModule">
+    <Position X="1.5" Y="15" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAQAAAAAAAQAAAAAAAAAAABAAAEAAAAEAAA=</HashCode>
+      <FileName>ThreatClassificationModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserActivity">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAARAAGAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserActivity.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserActivityCollector">
+    <Position X="2" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAACAECAAAAIgAAAAAAAAgIAAAAAgAAAAACAgAA=</HashCode>
+      <FileName>UserActivityCollector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserActivityMeta">
+    <Position X="18.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>UserActivityMeta.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="metadata" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="UserNotificationSystem">
+    <Position X="19.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAEAAAAQAAAAAA=</HashCode>
+      <FileName>UserNotificationSystem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="std::unordered_map&lt;_Kty, _Ty, _Hasher, _Keyeq, _Alloc&gt;" Collapsed="true">
+    <Position X="24.75" Y="0.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>BABAAAAAAABAAACQAAAAAAAAAAEABAAAgQAgAAAEAAA=</HashCode>
+      <FileName>D:\VS 2022\main\VC\Tools\MSVC\14.43.34808\include\unordered_map</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
