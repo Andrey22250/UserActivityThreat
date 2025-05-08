@@ -1,3 +1,4 @@
+// Класс-адаптер, который адаптирует интерфейс ThirdPartyAnalyzer под ожидаемый системой интерфейс IBehaviorAnalyzer
 #pragma once
 #include <string>
 #include <iostream>

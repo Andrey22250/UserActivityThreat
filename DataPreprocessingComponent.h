@@ -1,3 +1,4 @@
+//Абстракция, использующая интерфейс IDataPreprocessor для выполнения обработки входных данных. Позволяет легко переключать стратегию обработки между текстом, аудио и фото
 #include "IDataPreprocessor.h"
 
 class DataPreprocessingComponent {

@@ -1,3 +1,4 @@
+//Реализация Аудио обработчика
 #pragma once
 #include "IDataPreprocessor.h"
 #include <iostream>

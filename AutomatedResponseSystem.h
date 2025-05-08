@@ -1,3 +1,4 @@
+// Автоматизированная система реагирования на инциденты
 #pragma once
 #include <iostream>
 #include "IResponseSystem.h"
