@@ -1,11 +1,15 @@
 ﻿#include <iostream>
 #include <windows.h>
-#include "State.h"
-#include "Memento.h"
-#include "UserSecurityProfile.h"
-#include "ThreatMonitor.h"
-#include "ModeratorNotifier.h"
-#include "LogSystem.h"
+#include "AnalyzeUserBehaviorCommand.h"
+#include "LogActivityCommand.h"
+#include "CommandInvoker.h"
+#include "SpamFilterHandler.h"
+#include "AnomalyDetectionHandler.h"
+#include "DefaultHandler.h"
+#include "UserActivityModule.h"
+#include "ThreatDetectionComponent.h"
+#include "LoggingVisitor.h"
+#include <vector>
 #include <memory>
 
 
@@ -14,42 +18,54 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-	// --- State Demo ---
-	std::cout << "=== State Demo ===\n";
-    std::shared_ptr<IAnalysisState> initialState = std::make_shared<InitialCollectionState>();
-    AnalysisContext context(initialState);
+	// --- Command Demo ---
+	std::cout << "=== Command Demo ===\n";
+    CommandInvoker invoker;
 
-    context.process(); // InitialCollectionState -> BehaviorAnalysisState
-    context.process(); // BehaviorAnalysisState -> ThreatAssessmentState
-    context.process(); // ThreatAssessmentState -> завершение
+    ICommand* analyzeCmd = new AnalyzeUserBehaviorCommand("Сеанс: активность по кликам и просмотрам");
+    ICommand* logCmd = new LogActivityCommand("Пользователь вошёл в систему");
 
-    // --- Memento Demo ---
-    std::cout << "\n=== Memento Demo ===\n";
-    UserSecurityProfile profile("Низкий", "Нормальный");
-    profile.print();
+    invoker.addCommand(analyzeCmd);
+    invoker.addCommand(logCmd);
 
-    Memento* snapshot = profile.save();  // Сохраняем состояние
+    std::cout << "--- Выполнение команд ---" << std::endl;
+    invoker.run();
 
-    profile.setThreatLevel("Высокий");
-    profile.setBehaviorTag("Подозрительный");
-    profile.print();
+    std::cout << "\n--- Отмена команд ---" << std::endl;
+    invoker.undoAll();
 
-    profile.restore(snapshot);  // Восстанавливаем
-    profile.print();
+	// --- Chain of Responsibility Demo ---
+	std::cout << "\n=== Chain of Responsibility Demo ===\n";
+    auto spamFilter = std::make_shared<SpamFilterHandler>();
+    auto anomalyDetector = std::make_shared<AnomalyDetectionHandler>();
+    auto defaultHandler = std::make_shared<DefaultHandler>();
 
-    delete snapshot;
+    spamFilter->setNext(anomalyDetector);
+    anomalyDetector->setNext(defaultHandler);
 
-	// --- Observer Demo ---
-	std::cout << "\n=== Observer Demo ===\n";
-	ThreatMonitor monitor;
-	LogSystem logger;
-	ModeratorNotifier moderator;
+    std::string userData1 = "Это сообщение содержит spam";
+    std::string userData2 = "Это suspicious активность";
+    std::string userData3 = "Обычное сообщение";
 
-	monitor.addObserver(&logger);
-	monitor.addObserver(&moderator);
+    spamFilter->handle(userData1);
+    spamFilter->handle(userData2);
+    spamFilter->handle(userData3);
 
-	monitor.setThreatLevel("Средний");
-	monitor.setThreatLevel("Высокий");
+	// --- Visitor Demo ---
+	std::cout << "\n=== Visitor Demo ===\n";
+    std::vector<IVisitableModule*> modules;
+    modules.push_back(new UserActivityModule());
+    modules.push_back(new ThreatDetectionComponent());
+
+    LoggingVisitor logger;
+
+    for (auto* module : modules) {
+        module->accept(logger);
+    }
+
+    for (auto* module : modules) {
+        delete module;
+    }
 
     return 0;
 }

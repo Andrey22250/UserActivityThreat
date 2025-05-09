@@ -84,13 +84,13 @@
       <FileName>CentralControlModule.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="dataCollector" />
+      <Field Name="dataPreprocessor" />
+      <Field Name="behaviorAnalyzer" />
       <Field Name="threatAssessment" />
       <Field Name="responseSystem" />
       <Field Name="machineLearning" />
-      <Field Name="dataPreprocessor" />
-      <Field Name="dataCollector" />
       <Field Name="communication" />
-      <Field Name="behaviorAnalyzer" />
     </ShowAsAssociation>
   </Class>
   <Class Name="CompressionDecorator">
@@ -159,12 +159,12 @@
       <FileName>IControlCenter.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="dataCollector" />
+      <Field Name="dataPreprocessor" />
       <Field Name="behaviorAnalyzer" />
       <Field Name="threatAssessment" />
       <Field Name="responseSystem" />
       <Field Name="machineLearning" />
-      <Field Name="dataPreprocessor" />
-      <Field Name="dataCollector" />
       <Field Name="communication" />
     </ShowAsAssociation>
   </Class>
@@ -522,7 +522,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ModeratorNotifier">
-    <Position X="10.75" Y="16.25" Width="1.5" />
+    <Position X="10.75" Y="16.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ModeratorNotifier.h</FileName>
@@ -533,6 +533,97 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>LogSystem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnalyzeUserBehaviorCommand">
+    <Position X="28" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAEEAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AnalyzeUserBehaviorCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnomalyDetectionHandler">
+    <Position X="27.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>AnomalyDetectionHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommandInvoker">
+    <Position X="26" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAoAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandInvoker.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DefaultHandler">
+    <Position X="31.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>DefaultHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ICommand">
+    <Position X="29.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IDataProcessingVisitor">
+    <Position X="28.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDataProcessingVisitor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IHandler">
+    <Position X="29.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAIAAAA=</HashCode>
+      <FileName>IHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IVisitableModule">
+    <Position X="29.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IVisitableModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogActivityCommand">
+    <Position X="30.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAABAEAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>LogActivityCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoggingVisitor">
+    <Position X="28.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LoggingVisitor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpamFilterHandler">
+    <Position X="29.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>SpamFilterHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThreatDetectionComponent">
+    <Position X="28" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ThreatDetectionComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserActivityModule">
+    <Position X="30.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserActivityModule.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
