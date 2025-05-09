@@ -153,13 +153,16 @@
     <ClCompile Include="ImagePreprocessor.cpp" />
     <ClCompile Include="IModeratorConnection.cpp" />
     <ClCompile Include="INotificationSystem.cpp" />
+    <ClCompile Include="IObserver.cpp" />
     <ClCompile Include="IPlatformFactory.cpp" />
     <ClCompile Include="IResponseSystem.cpp" />
     <ClCompile Include="IThirdBehaviorAnalysis.cpp" />
     <ClCompile Include="IThreatAnalyzer.cpp" />
     <ClCompile Include="IThreatAssessment.cpp" />
     <ClCompile Include="LoggingDecorator.cpp" />
+    <ClCompile Include="LogSystem.cpp" />
     <ClCompile Include="MachineLearningModule.cpp" />
+    <ClCompile Include="Memento.cpp" />
     <ClCompile Include="MetadataEncryptor.cpp" />
     <ClCompile Include="MetadataFactory.cpp" />
     <ClCompile Include="MetadataShared.cpp" />
@@ -170,20 +173,24 @@
     <ClCompile Include="DataCollectorProxy.cpp" />
     <ClCompile Include="ModeratorConnection.cpp" />
     <ClCompile Include="ModeratorConnectionPool.cpp" />
+    <ClCompile Include="ModeratorNotifier.cpp" />
     <ClCompile Include="RetryDecorator.cpp" />
     <ClCompile Include="RuleBasedThreatAnalyzer.cpp" />
     <ClCompile Include="RuleBasedThreatAnalyzerFactory.cpp" />
     <ClCompile Include="SecuritySystemFacade.cpp" />
+    <ClCompile Include="State.cpp" />
     <ClCompile Include="SystemConfigManager.cpp" />
     <ClCompile Include="TextPreprocessor.cpp" />
     <ClCompile Include="ThreatAnalyzerFactory.cpp" />
     <ClCompile Include="ThreatClassificationModule.cpp" />
     <ClCompile Include="ThreatDetectionModule.cpp" />
+    <ClCompile Include="ThreatMonitor.cpp" />
     <ClCompile Include="UserActivity.cpp" />
     <ClCompile Include="UserActivityCollector.cpp" />
     <ClCompile Include="UserActivityMeta.cpp" />
     <ClCompile Include="UserActivityThreat.cpp" />
     <ClCompile Include="UserNotificationSystem.cpp" />
+    <ClCompile Include="UserSecurityProfile.cpp" />
     <ClCompile Include="WebPlatformFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -212,13 +219,16 @@
     <ClInclude Include="ImagePreprocessor.h" />
     <ClInclude Include="IModeratorConnection.h" />
     <ClInclude Include="INotificationSystem.h" />
+    <ClInclude Include="IObserver.h" />
     <ClInclude Include="IPlatformFactory.h" />
     <ClInclude Include="IResponseSystem.h" />
     <ClInclude Include="IThirdBehaviorAnalysis.h" />
     <ClInclude Include="IThreatAnalyzer.h" />
     <ClInclude Include="IThreatAssessment.h" />
     <ClInclude Include="LoggingDecorator.h" />
+    <ClInclude Include="LogSystem.h" />
     <ClInclude Include="MachineLearningModule.h" />
+    <ClInclude Include="Memento.h" />
     <ClInclude Include="MetadataEncryptor.h" />
     <ClInclude Include="MetadataFactory.h" />
     <ClInclude Include="MetadataShared.h" />
@@ -229,24 +239,28 @@
     <ClInclude Include="DataCollectorProxy.h" />
     <ClInclude Include="ModeratorConnection.h" />
     <ClInclude Include="ModeratorConnectionPool.h" />
+    <ClInclude Include="ModeratorNotifier.h" />
     <ClInclude Include="RetryDecorator.h" />
     <ClInclude Include="RuleBasedThreatAnalyzer.h" />
     <ClInclude Include="RuleBasedThreatAnalyzerFactory.h" />
     <ClInclude Include="runScript.h" />
     <ClInclude Include="SecuritySystemFacade.h" />
+    <ClInclude Include="State.h" />
     <ClInclude Include="SystemConfigManager.h" />
     <ClInclude Include="TextPreprocessor.h" />
     <ClInclude Include="ThreatAnalyzerFactory.h" />
     <ClInclude Include="ThreatClassificationModule.h" />
     <ClInclude Include="ThreatDetectionModule.h" />
+    <ClInclude Include="ThreatMonitor.h" />
     <ClInclude Include="UserActivity.h" />
     <ClInclude Include="UserActivityCollector.h" />
     <ClInclude Include="UserActivityMeta.h" />
     <ClInclude Include="UserNotificationSystem.h" />
+    <ClInclude Include="UserSecurityProfile.h" />
     <ClInclude Include="WebPlatformFactory.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

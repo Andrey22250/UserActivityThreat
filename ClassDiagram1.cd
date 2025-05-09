@@ -1,107 +1,107 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="WebLogger">
-    <Position X="15.5" Y="7.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WebPlatformFactory.cpp</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="WebDataCollector">
-    <Position X="0.5" Y="15.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WebPlatformFactory.cpp</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="WebNotificationSystem">
-    <Position X="12.5" Y="16.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WebPlatformFactory.cpp</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="MobileLogger">
-    <Position X="17.75" Y="7.75" Width="1.5" />
+    <Position X="0.5" Y="20.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MobilePlatformFactory.cpp</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MobileDataCollector">
-    <Position X="2.75" Y="15.75" Width="1.75" />
+    <Position X="5.5" Y="20.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MobilePlatformFactory.cpp</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MobileNotificationSystem">
-    <Position X="15.25" Y="16.75" Width="2" />
+    <Position X="16.5" Y="11.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MobilePlatformFactory.cpp</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="WebLogger">
+    <Position X="2.75" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPlatformFactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebDataCollector">
+    <Position X="7.75" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPlatformFactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebNotificationSystem">
+    <Position X="18.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebPlatformFactory.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="ActivityIterator">
-    <Position X="22.25" Y="13" Width="1.5" />
+    <Position X="3.5" Y="24.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>kAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAABAAAIAAAA=</HashCode>
       <FileName>ActivityIterator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AudioPreprocessor">
-    <Position X="14.5" Y="12.5" Width="1.75" />
+    <Position X="3" Y="16" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAACAAAAAA=</HashCode>
       <FileName>AudioPreprocessor.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutomatedResponseSystem">
-    <Position X="18.5" Y="22.5" Width="2.25" />
+    <Position X="20.5" Y="3" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAIAgAAAAAAAAAAEIAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AutomatedResponseSystem.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BehaviorAnalysisModule">
-    <Position X="20.5" Y="7.5" Width="2" />
+    <Position X="0.5" Y="25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAIgAAAAAAEgEAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>BehaviorAnalysisModule.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BehaviorAnalyzerAdapter">
-    <Position X="15.5" Y="20.75" Width="2" />
+    <Position X="19.5" Y="21.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAwAAAAAAEgEAAAAAAAAAAAAAAABBAAAAQAAAAAAg=</HashCode>
       <FileName>BehaviorAnalyzerAdapter.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CentralControlModule">
-    <Position X="0.5" Y="27.25" Width="2.25" />
+    <Position X="21.5" Y="11.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>QEABAIAAAAACBAABBIAQAKAAAAAABQAAAgAAIAAAAAA=</HashCode>
       <FileName>CentralControlModule.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="behaviorAnalyzer" />
-      <Field Name="communication" />
-      <Field Name="dataCollector" />
-      <Field Name="dataPreprocessor" />
-      <Field Name="machineLearning" />
-      <Field Name="responseSystem" />
       <Field Name="threatAssessment" />
+      <Field Name="responseSystem" />
+      <Field Name="machineLearning" />
+      <Field Name="dataPreprocessor" />
+      <Field Name="dataCollector" />
+      <Field Name="communication" />
+      <Field Name="behaviorAnalyzer" />
     </ShowAsAssociation>
   </Class>
   <Class Name="CompressionDecorator">
-    <Position X="6" Y="6.75" Width="2" />
+    <Position X="7.75" Y="6.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>CompressionDecorator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DataPreprocessingComponent">
-    <Position X="15" Y="1" Width="2.25" />
+    <Position X="24.5" Y="0.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataPreprocessingComponent.h</FileName>
@@ -111,177 +111,275 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="DataPreprocessingModule">
-    <Position X="0.75" Y="12" Width="2" />
+    <Position X="11" Y="12.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataPreprocessingModule.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DataProcessorComposite">
-    <Position X="6.25" Y="12" Width="2" />
+    <Position X="13.25" Y="11.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAACACAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataProcessorComposite.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IActivityIterator">
-    <Position X="22.25" Y="11" Width="1.5" />
+    <Position X="3.5" Y="22.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>IActivityIterator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IBehaviorAnalyzer">
-    <Position X="20.5" Y="5" Width="2" />
+    <Position X="0.5" Y="22.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAEgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IBehaviorAnalyzer.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ICloneableModule">
+    <Position X="10.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>ICloneableModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="ICommunication">
-    <Position X="6.5" Y="20" Width="2.25" />
+    <Position X="16.5" Y="19.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>ICommunication.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IControlCenter">
-    <Position X="0.5" Y="22" Width="2.25" />
+    <Position X="21.5" Y="6.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>QEABAIAAAAACBAABBIAQAKAAAAAABQAAAgAAIAAAAAA=</HashCode>
       <FileName>IControlCenter.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="behaviorAnalyzer" />
-      <Field Name="communication" />
-      <Field Name="dataCollector" />
       <Field Name="threatAssessment" />
       <Field Name="responseSystem" />
       <Field Name="machineLearning" />
       <Field Name="dataPreprocessor" />
+      <Field Name="dataCollector" />
+      <Field Name="communication" />
     </ShowAsAssociation>
   </Class>
   <Class Name="IDataCollector">
-    <Position X="7.5" Y="1" Width="1.75" />
+    <Position X="6.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAIAAAAAAAAAAIAAAAAAAAAAACAAAA=</HashCode>
       <FileName>IDataCollector.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IDataCollectorDecorator">
-    <Position X="8.5" Y="3.5" Width="2" />
+    <Position X="7.75" Y="3" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAMAAAAAAAAAAIAAIAAAAAAAACAAAA=</HashCode>
       <FileName>IDataCollectorDecorator.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="IDataCollectorNew">
+    <Position X="6.75" Y="18.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDataCollectorNew.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="IDataPreprocessor">
-    <Position X="12" Y="10" Width="1.5" />
+    <Position X="3" Y="13.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAACAAAAAA=</HashCode>
       <FileName>IDataPreprocessor.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IDataProcessorComponent">
-    <Position X="3.25" Y="10" Width="2.25" />
+    <Position X="11" Y="9.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IDataProcessorComponent.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ILogger">
+    <Position X="1.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILogger.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="IMachineLearning">
-    <Position X="12.5" Y="1" Width="1.75" />
+    <Position X="3.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAABAAAAIAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>IMachineLearning.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ImagePreprocessor">
-    <Position X="9.75" Y="12.5" Width="1.75" />
+    <Position X="0.75" Y="16" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAACAAAAAA=</HashCode>
       <FileName>ImagePreprocessor.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="IModeratorConnection">
+    <Position X="13.5" Y="18.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IModeratorConnection.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="INotificationSystem">
+    <Position X="17.75" Y="9.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>INotificationSystem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPlatformFactory">
+    <Position X="16.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>IPlatformFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="IResponseSystem">
-    <Position X="18.75" Y="20" Width="1.5" />
+    <Position X="20.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAgAAAAAAAAAAEIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IResponseSystem.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IThirdBehaviorAnalysis">
-    <Position X="15.5" Y="19" Width="2" />
+    <Position X="19.5" Y="19.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>IThirdBehaviorAnalysis.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="IThreatAnalyzer">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IThreatAnalyzer.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="IThreatAssessment">
-    <Position X="18.5" Y="14" Width="2" />
+    <Position X="18.5" Y="13.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>IThreatAssessment.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LoggingDecorator">
-    <Position X="11.25" Y="6.75" Width="1.75" />
+    <Position X="5.5" Y="6.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>LoggingDecorator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MachineLearningModule">
-    <Position X="3.5" Y="12" Width="2" />
+    <Position X="8.75" Y="12.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MachineLearningModule.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MetadataEncryptor">
-    <Position X="13.75" Y="3.5" Width="1.75" />
+    <Position X="3.25" Y="3" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MetadataEncryptor.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MetadataFactory">
-    <Position X="10.25" Y="1" Width="1.5" />
+    <Position X="15.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>MetadataFactory.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MetadataShared">
-    <Position X="13.75" Y="8" Width="1.5" />
+    <Position X="13.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAIAAAAAEAAAAAAAAAAAAgAAAAAAAAAgAAAAA=</HashCode>
       <FileName>MetadataShared.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="MLThreatAnalyzer">
+    <Position X="17.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MLThreatAnalyzer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MLThreatAnalyzerFactory">
+    <Position X="16.25" Y="16.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MLThreatAnalyzerFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MobilePlatformFactory">
+    <Position X="15.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>MobilePlatformFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="ModeratorCommunication">
-    <Position X="6.5" Y="22.5" Width="2.25" />
+    <Position X="16.5" Y="22" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAQACAAEAAAAAAAAAAgEAAAAAAAEAAAAAQAEAAAA=</HashCode>
       <FileName>ModeratorCommunication.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DataCollectorProxy">
-    <Position X="3.5" Y="3.5" Width="1.75" />
+    <Position X="1" Y="3" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAEAAIAAIAAgAAAAAAAIAAAAAAAAAAACAAAA=</HashCode>
       <FileName>DataCollectorProxy.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ModeratorConnection">
+    <Position X="13.5" Y="20.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModeratorConnection.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModeratorConnectionPool">
+    <Position X="11.75" Y="14" Width="2" />
+    <TypeIdentifier>
+      <HashCode>UAIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>ModeratorConnectionPool.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="RetryDecorator">
-    <Position X="8.75" Y="6.75" Width="1.75" />
+    <Position X="10" Y="6.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQBAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RetryDecorator.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="RuleBasedThreatAnalyzer">
+    <Position X="15.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleBasedThreatAnalyzer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RuleBasedThreatAnalyzerFactory">
+    <Position X="13.5" Y="16.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RuleBasedThreatAnalyzerFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="SecuritySystemFacade">
-    <Position X="26.5" Y="3.25" Width="2" />
+    <Position X="24.5" Y="9.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAgAAAAAAACAAAAAAAIA=</HashCode>
       <FileName>SecuritySystemFacade.h</FileName>
@@ -290,175 +388,151 @@
       <Field Name="controlModule" />
     </ShowAsAssociation>
   </Class>
+  <Class Name="SystemConfigManager">
+    <Position X="7.5" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAgAQAAABAAAAAAAQAAAAAAABAIAQAAAAAAABEIAQ=</HashCode>
+      <FileName>SystemConfigManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="TextPreprocessor">
-    <Position X="12.25" Y="12.5" Width="1.5" />
+    <Position X="5.25" Y="16" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAACAAAAAA=</HashCode>
       <FileName>TextPreprocessor.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ThreatAnalyzerFactory">
+    <Position X="14.75" Y="14.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ThreatAnalyzerFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="ThreatClassificationModule">
-    <Position X="18.5" Y="16.5" Width="2.25" />
+    <Position X="18.5" Y="16" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAQAAAAAAAQAAAAAAAAAAABAAAEAAAAEAAA=</HashCode>
       <FileName>ThreatClassificationModule.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ThreatDetectionModule">
+    <Position X="10.5" Y="20.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAQIAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>ThreatDetectionModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="UserActivity">
-    <Position X="13.75" Y="5.5" Width="1.5" />
+    <Position X="0.75" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAARAAGAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UserActivity.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UserActivityCollector">
-    <Position X="1" Y="3.5" Width="1.75" />
+    <Position X="12.25" Y="3" Width="1.75" />
     <TypeIdentifier>
       <HashCode>gAQAAAACAECAAAAIgAAAAAAAAgIAAAAAgAAAAACAgAA=</HashCode>
       <FileName>UserActivityCollector.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UserActivityMeta">
-    <Position X="24.25" Y="3" Width="1.5" />
+    <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAwAAAAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>UserActivityMeta.h</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="metadata" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="UserNotificationSystem">
-    <Position X="26.75" Y="5.5" Width="2" />
+    <Position X="10" Y="3.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAEAAAAQAAAAAA=</HashCode>
       <FileName>UserNotificationSystem.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="IThreatAnalyzer">
-    <Position X="2" Y="18" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IThreatAnalyzer.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MLThreatAnalyzer">
-    <Position X="0.5" Y="19.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MLThreatAnalyzer.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="RuleBasedThreatAnalyzer">
-    <Position X="2.75" Y="19.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RuleBasedThreatAnalyzer.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ThreatAnalyzerFactory">
-    <Position X="19" Y="1" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ThreatAnalyzerFactory.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MLThreatAnalyzerFactory">
-    <Position X="17.5" Y="2.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MLThreatAnalyzerFactory.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="RuleBasedThreatAnalyzerFactory">
-    <Position X="20.25" Y="2.75" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RuleBasedThreatAnalyzerFactory.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ILogger">
-    <Position X="16.75" Y="6" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ILogger.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="INotificationSystem">
-    <Position X="14" Y="15" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>INotificationSystem.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="IPlatformFactory">
-    <Position X="8" Y="15" Width="2" />
-    <TypeIdentifier>
-      <HashCode>EAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
-      <FileName>IPlatformFactory.h</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="WebPlatformFactory">
-    <Position X="6.5" Y="17.25" Width="2" />
+    <Position X="17.75" Y="6.75" Width="2" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>WebPlatformFactory.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MobilePlatformFactory">
-    <Position X="9.25" Y="17.25" Width="2" />
+  <Class Name="IAnalysisState">
+    <Position X="1" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
-      <FileName>MobilePlatformFactory.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGACAAAAA=</HashCode>
+      <FileName>State.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="IDataCollectorNew">
-    <Position X="1.75" Y="14" Width="1.75" />
+  <Class Name="InitialCollectionState">
+    <Position X="0.75" Y="10" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IDataCollectorNew.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAA=</HashCode>
+      <FileName>State.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SystemConfigManager">
-    <Position X="24" Y="8.25" Width="2.25" />
+  <Class Name="BehaviorAnalysisState">
+    <Position X="3" Y="10" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAgAQAAABAAAAAAAQAAAAAAABAIAQAAAAAAABEIAQ=</HashCode>
-      <FileName>SystemConfigManager.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAA=</HashCode>
+      <FileName>State.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ICloneableModule">
-    <Position X="12.75" Y="19" Width="1.5" />
+  <Class Name="ThreatAssessmentState">
+    <Position X="3" Y="7.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>ICloneableModule.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAA=</HashCode>
+      <FileName>State.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ThreatDetectionModule">
-    <Position X="12.5" Y="21" Width="2" />
+  <Class Name="AnalysisContext">
+    <Position X="5.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAQIAAAAAAAAAAAAEAAAAAA=</HashCode>
-      <FileName>ThreatDetectionModule.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAYAAAAAAAAAAAABAAAAAAQ=</HashCode>
+      <FileName>State.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="IModeratorConnection">
-    <Position X="17.5" Y="10" Width="2" />
+  <Class Name="UserSecurityProfile">
+    <Position X="5.5" Y="10.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IModeratorConnection.h</FileName>
+      <HashCode>AARAAAAAAACAAAIAAAAAAAAAAAAAAAAAACAAAgBEgAQ=</HashCode>
+      <FileName>UserSecurityProfile.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ModeratorConnection">
-    <Position X="17.5" Y="11.75" Width="1.75" />
+  <Class Name="Memento">
+    <Position X="5.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ModeratorConnection.h</FileName>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAGAAAAAAACAAAAAAAAQ=</HashCode>
+      <FileName>Memento.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ModeratorConnectionPool">
-    <Position X="24.25" Y="5.5" Width="2.25" />
+  <Class Name="IObserver">
+    <Position X="9.75" Y="14.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>UAIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAgAAAAAAAA=</HashCode>
-      <FileName>ModeratorConnectionPool.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>IObserver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThreatMonitor">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAIAAAQAAAAAAAAAAAAAAAAAAACABEAAA=</HashCode>
+      <FileName>ThreatMonitor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModeratorNotifier">
+    <Position X="10.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ModeratorNotifier.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogSystem">
+    <Position X="8.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>LogSystem.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

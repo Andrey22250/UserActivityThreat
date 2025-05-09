@@ -1,14 +1,11 @@
 ﻿#include <iostream>
 #include <windows.h>
-#include "MLThreatAnalyzerFactory.h"
-#include "RuleBasedThreatAnalyzerFactory.h"
-#include "WebPlatformFactory.h"
-#include "MobilePlatformFactory.h"
-#include "runScript.h"
-#include "SystemConfigManager.h"
-#include "ThreatDetectionModule.h"
-#include "ModeratorConnectionPool.h"
-#include <vector>
+#include "State.h"
+#include "Memento.h"
+#include "UserSecurityProfile.h"
+#include "ThreatMonitor.h"
+#include "ModeratorNotifier.h"
+#include "LogSystem.h"
 #include <memory>
 
 
@@ -17,71 +14,42 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-	// --- Factory Method Demo ---
-	std::cout << "=== Factory Method Demo ===";
-    MLThreatAnalyzerFactory mlFactory;
-    RuleBasedThreatAnalyzerFactory ruleFactory;
+	// --- State Demo ---
+	std::cout << "=== State Demo ===\n";
+    std::shared_ptr<IAnalysisState> initialState = std::make_shared<InitialCollectionState>();
+    AnalysisContext context(initialState);
 
-    std::cout << "\n=== ML Анализатор ===\n";
-    runAnalysis(&mlFactory);
+    context.process(); // InitialCollectionState -> BehaviorAnalysisState
+    context.process(); // BehaviorAnalysisState -> ThreatAssessmentState
+    context.process(); // ThreatAssessmentState -> завершение
 
-    std::cout << "\n=== Основанный на правилах Анализатор ===\n";
-    runAnalysis(&ruleFactory);
+    // --- Memento Demo ---
+    std::cout << "\n=== Memento Demo ===\n";
+    UserSecurityProfile profile("Низкий", "Нормальный");
+    profile.print();
 
-	// --- Abstract Factory Demo ---
-	std::cout << "\n=== Abstract Factory Demo ===\n";
-    WebPlatformFactory webFactory;
-    MobilePlatformFactory mobileFactory;
+    Memento* snapshot = profile.save();  // Сохраняем состояние
 
-    std::cout << "--- Web Platform ---\n";
-    runSystem(&webFactory);
+    profile.setThreatLevel("Высокий");
+    profile.setBehaviorTag("Подозрительный");
+    profile.print();
 
-    std::cout << "\n--- Mobile Platform ---\n";
-    runSystem(&mobileFactory);
+    profile.restore(snapshot);  // Восстанавливаем
+    profile.print();
 
-	// --- Singleton Demo ---
-	std::cout << "\n=== Singleton Demo ===\n";
-    auto* config = SystemConfigManager::getInstance();
+    delete snapshot;
 
-    std::cout << "Logging активировано: " << std::boolalpha << config->isLoggingEnabled() << "\n";
-    std::cout << "ML активировано: " << config->isMachineLearningEnabled() << "\n";
-    std::cout << "Уровень угрозы: " << config->getThreatLevel() << "\n";
+	// --- Observer Demo ---
+	std::cout << "\n=== Observer Demo ===\n";
+	ThreatMonitor monitor;
+	LogSystem logger;
+	ModeratorNotifier moderator;
 
-    // Меняем настройки
-    config->setLoggingEnabled(false);
-    config->setMachineLearningEnabled(true);
-    config->setThreatLevel(7);
+	monitor.addObserver(&logger);
+	monitor.addObserver(&moderator);
 
-    std::cout << "\nНовые настройки:\n";
-    std::cout << "Logging активировано: " << config->isLoggingEnabled() << "\n";
-    std::cout << "ML активировано: " << config->isMachineLearningEnabled() << "\n";
-    std::cout << "Уровень угрозы: " << config->getThreatLevel() << "\n";
-
-	// --- Prototype Demo ---
-	std::cout << "\n=== Prototype Demo ===\n";
-    ThreatDetectionModule* original = new ThreatDetectionModule("ML+Аномальный");
-    ICloneableModule* clone1 = original->clone();
-    ICloneableModule* clone2 = clone1->clone();
-
-    clone1->execute();
-    clone2->execute();
-
-    delete original;
-    delete clone1;
-    delete clone2;
-
-	// --- Object Pool Demo ---
-	std::cout << "\n=== Object Pool Demo ===\n";
-    ModeratorConnectionPool pool(2);
-
-    IModeratorConnection* conn1 = pool.acquire();
-    conn1->sendAlert("Подозрительная активность найдена");
-
-    IModeratorConnection* conn2 = pool.acquire();
-    conn2->sendAlert("Многократный провал авторизации");
-
-    pool.release(conn1);
-    pool.release(conn2);
+	monitor.setThreatLevel("Средний");
+	monitor.setThreatLevel("Высокий");
 
     return 0;
 }
